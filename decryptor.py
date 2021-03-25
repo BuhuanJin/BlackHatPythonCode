@@ -4,7 +4,7 @@ from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
  
 private_key = "你生成的私钥"
-encrypted = "复制加密的内容过来"
+encrypted   = "复制加密的内容过来"
 
 # 应用秘钥对RSA类进行实例化
 rsakey = RSA.importKey(private_key)
