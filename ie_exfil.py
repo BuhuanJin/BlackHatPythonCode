@@ -12,7 +12,13 @@ doc_type = ".doc"
 username = ""
 password = ""
 
-public_key = "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnqDNZMxg2xp620nt0QTwJ0Bv7pRJvdV0Yems1JxnOqA3uCrdZe/fXpD7+kUFRZ6sCZnvcicuyGDMKszvIK75/QWLLCIoMt5cPk1gqsN1djFmG95k63Z/fU1CZbcWa3Kdzo5Ca0Mu262y/n0q5r8TT4khKNOsjeyup1Fk3ll+/DrUrMqxXmX6YK/tGtJhzT+wK55zoZakVR+9S8wHQq27Y+y2xhS2aq1sxZEnYM3/MGerH8nRZZ4WLf2bqMUHywT80cVCxkHb7J5dKNELx4PRIWPbYdmRxHljJpK2kt383yoIQihK5qKkj2SuBFsvoVNEwq4hzVGQTBNn43BRVj8BpwIDAQAB-----END PUBLIC KEY-----"
+public_key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2bUfRxUvqCqUCXWZTUK8\
+              D0x9x+gn3knyQ9GN2OCUZVJLo43uwuNd18wJAMl40Djz7GEWRL5ZV2I/s1DOJVE5\
+              2UeG2JXEX9tCiwSTJLehEGrkdW4D+u3rDutRjnEHWRwce8f1O0UzWP6Xje5P/iXs\
+              5Y5FXdb+uCnc3UW4tO1UsiBfmLmq7SdsgJE7azaK8UrP7hZOTxDiBokwEID0cWif\
+              u88nsu8aYMcQ6G40lo+9xBIZj64pz4VLA8lGN5wowHTfpCahYdzXFnomEaqfg/5T\
+              48snxnOk9jrbuapP0zU3Srp4DnJb0M/nOh2FtkOTFyvXewIqOfXuI+pDukY4gHnq\
+              JwIDAQAB"
 
 
 def wait_for_browser(browser):
