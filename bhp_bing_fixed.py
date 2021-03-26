@@ -112,15 +112,23 @@ class BurpExtender(IBurpExtender, IContextMenuFactory):
         jsthread.join()
         json_body = jsthread.get_result()
   
-        print("json_body: %s" %json_body)
-        json_body = json_body.split("\r\n\r\n", 1)[1]
         #print("json_body: %s" %json_body)
+        json_body = json_body.split("\r\n\r\n", 1)[1]
+        #print("json_body: %s" %type(json_body))
+
+        temp = json_body.split(',')
+        
+        for i in temp:
+            if "id\":" in i:
+                print("\n")
+            print("%s" %i)
  
         try:
             r = json.loads(json_body)
-            print(r)
+            #print(r)
  
             if len(r["d"]["results"]):
+                print(r["d"]["results"])
                 for site in r["d"]["results"]:
  
                     print "*" * 100
