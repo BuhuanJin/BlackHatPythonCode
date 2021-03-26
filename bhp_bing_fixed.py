@@ -14,7 +14,7 @@ import base64
 from threading import Thread
 
  
-bing_api_key = "cd78b019fc034569afecffee014fbab4"
+bing_api_key = "Your one api key"
 
 class MyThread(Thread):
     def __init__(self, func, link, port, flag, http_request):
