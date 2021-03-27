@@ -71,11 +71,6 @@ def start_monitor(path_to_watch):
                     except:
                         print "[!!!] Failed."
 
-                    # 文件和文件扩展名分离
-                    filename, extension = os.path.splitext(full_filename)
-                    if extension in file_types:
-                        inject_code(full_filename, extension, contents)
-
                 # 重命名哪个文件
                 elif action == FILE_RENAMED_FROM:
                     print "[ > ] Renamed from: %s" % full_filename
