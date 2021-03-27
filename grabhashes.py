@@ -41,7 +41,7 @@ for offset in registry.all_offsets:
         sam_offset = offset
         print "[*] SAM: 0x%08x" % offset
 
-    if registry.all_offsets[offset].endswith("\\system"):
+    if registry.all_offsets[offset].endswith("\\SYSTEM"):    #注意大小写，DOS不介意，不意味着Python也是
         sys_offset = offset
         print "[*] System: 0x%08x" % offset
 
