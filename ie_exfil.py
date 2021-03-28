@@ -12,14 +12,19 @@ doc_type = ".doc"
 username = ""
 password = ""
 
-public_key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2bUfRxUvqCqUCXWZTUK8\
-              D0x9x+gn3knyQ9GN2OCUZVJLo43uwuNd18wJAMl40Djz7GEWRL5ZV2I/s1DOJVE5\
-              2UeG2JXEX9tCiwSTJLehEGrkdW4D+u3rDutRjnEHWRwce8f1O0UzWP6Xje5P/iXs\
-              5Y5FXdb+uCnc3UW4tO1UsiBfmLmq7SdsgJE7azaK8UrP7hZOTxDiBokwEID0cWif\
-              u88nsu8aYMcQ6G40lo+9xBIZj64pz4VLA8lGN5wowHTfpCahYdzXFnomEaqfg/5T\
-              48snxnOk9jrbuapP0zU3Srp4DnJb0M/nOh2FtkOTFyvXewIqOfXuI+pDukY4gHnq\
-              JwIDAQAB"
+# 这个public_key一样是没用
+public_key  = b"-----BEGIN PUBLIC KEY-----"
+#temp = b"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs+lgjKrnHbAw0Biq/HzzALtnZDkAWE2zL9x9vE0ck5x3QnLS73o1kNxFRFAOeDF7GGtsP8Q2bJYb+LWI+KvPvkJB9RBqDilmRf39FU714K8+DyavIvSXMnS2nQBXmHh3zQ6GZxoPiBeoPiCW3Xw09m3gEhyOBAyZo6qfuEnch4vWfXhwi1EsBPZSJRP0vdpcgiLzdglmP6UfCI9VkheDjgR1zs6yJb3D+ozuZRrX54TvYi9Xm/R6kSBgxQnOxVUAVEAej/kz1HLPjowGD8jmLHcAxQyfC6vtwv/VLNZm1zsnZ5bsVk9gec+2aSSbLqEBLSbwkIhOXHZcE2o6QvukmQIDAQAB"
 
+temp = b"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs+"
+missing_padding = 4 - len(temp)
+if missing_padding:
+    temp += b'=' * missing_padding
+
+public_key += temp
+print(len(public_key))
+public_key += b"-----END PUBLIC KEY-----"
+# 直接看我的微信公众号，有讲问题出在哪
 
 def wait_for_browser(browser):
     # 等待浏览器加载完一个页面
